@@ -1,0 +1,23 @@
+{
+  "name": "live-streaming-landing",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bloodless-freak/live-streaming-landing#readme",
+  "bugs": {
+    "url": "https://github.com/bloodless-freak/live-streaming-landing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloodless-freak/live-streaming-landing.git"
+  },
+  "license": "ISC",
+  "author": "Bloodless Freak",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:css"
+  },
+  "devDependencies": {
+    "sass": "^1.102.0"
+  }
+}
