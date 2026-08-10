@@ -9,3 +9,35 @@ body {
     background-color: v.$color-blue;
     font-family: "Roboto", sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+ul {
+    list-style: none;
+}
