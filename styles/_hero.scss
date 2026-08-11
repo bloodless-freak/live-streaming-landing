@@ -142,7 +142,7 @@
             &-img {
                 @include m.position(absolute, 1, -1, top, left, -60px, -20px);
             }
-            
+
             &-text {
                 padding: 10px 5px 10px 110px;
                 @include m.font(11px, 400, v.$color-black, 11px);
@@ -169,11 +169,11 @@
         }
 
         @media (max-width: v.$media_lg) {
-           @include m.position(absolute, 1, -1, bottom, left, 150px, 12px);
+            @include m.position(absolute, 1, -1, bottom, left, 150px, 12px);
         }
 
         @media (max-width: v.$media_md) {
-           @include m.position(absolute, 1, -1, bottom, left, 250px, 12px);
+            @include m.position(absolute, 1, -1, bottom, left, 250px, 12px);
         }
     }
 
