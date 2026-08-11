@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 @mixin d-flex($justify: center, $align: center, $wrap: nowrap, $direction: row, $column-gap: 0, $row-gap: 0) {
     display: flex;
     justify-content: $justify;
@@ -6,4 +8,27 @@
     flex-direction: $direction;
     column-gap: $column-gap;
     row-gap: $row-gap;
+}
+
+@mixin font($size: 16px, $weight: 400, $color: v.$color-white, $line-height: 1, $style: normal) {
+    font: {
+        size: $size;
+        weight: $weight;
+        style: $style;
+    }
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin position($type: relative, $z-index: 1, $inset: -1, $top-or-bottom: top, $left-or-right: left, $value1: 0, $value2: 0) {
+    position: $type;
+    z-index: $z-index;
+    
+    @if ($inset > -1) {
+        inset: $inset;
+    }
+    @else {
+        #{$top-or-bottom}: $value1;
+        #{$left-or-right}: $value2;
+    }
 }
