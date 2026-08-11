@@ -101,7 +101,8 @@
         &-text {
             @include m.font(14px, 400, v.$color-black, 14px);
             @include m.d-flex(center, center);
-            width: 450px;
+            max-width: 450px;
+            width: 100%;
             height: 100%;
             border-right: 1px solid v.$color-white;
             text-transform: uppercase;
@@ -119,6 +120,7 @@
         @media (max-width: v.$media-md) {
             @include m.d-flex(center, center, nowrap, column);
             max-width: 450px;
+            width: 100%;
             height: fit-content;
             margin: 120px auto 0;
 
@@ -136,7 +138,6 @@
         }
 
         @media (max-width: v.$media-sm) {
-            width: fit-content;
             margin: 80px auto 0;
 
             &-img {
