@@ -1,0 +1,184 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.hero {
+    max-width: 1260px;
+    margin: 0 auto;
+    position: relative;
+    padding: 150px 0;
+    background: url("../assets/cloud_alpha.png") center/contain no-repeat;
+
+    &__content {
+        width: 100%;
+        max-width: 930px;
+        position: relative;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @media (max-width: v.$media_lg) {
+            @include m.d-flex(start, center, nowrap, column, 0, 30px);
+            max-width: 700px;
+        }
+
+        @media (max-width: v.$media_md) {
+            max-width: 500px;
+        }
+
+        @media (max-width: v.$media_sm) {
+            max-width: 400px;
+        }
+    }
+
+    &__title {
+        @include m.font(120px, 700, v.$color-black, 120px);
+
+        @media (max-width: v.$media_lg) {
+            @include m.font(80px, 700, v.$color-black, 80px);
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.font(65px, 700, v.$color-black, 65px);
+        }
+
+        @media (max-width: v.$media_sm) {
+            @include m.font(45px, 700, v.$color-black, 45px);
+        }
+    }
+
+    &__button {
+        width: 380px;
+        height: 80px;
+        @include m.font(28px, 500, v.$color-white);
+        background-color: v.$color-black;
+        border: none;
+        border-radius: 90px;
+
+        @include m.position(absolute, 1, -1, bottom, right, 20px, -20px);
+
+        &:hover {
+            background-color: rgba(v.$color-black, $alpha: .7);
+        }
+
+        &:focus-visible {
+            outline: 2px solid v.$color-white;
+        }
+
+        @media (max-width: v.$media_lg) {
+            @include m.font(20px, 700, v.$color-white);
+            width: 300px;
+            height: 60px;
+            bottom: 10px;
+        }
+
+        @media (max-width: v.$media_md) {
+            position: static;
+        }
+
+        @media (max-width: v.$media_sm) {
+            @include m.font(15px, 700, v.$color-white);
+            width: 220px;
+            height: 40px;
+        }
+    }
+
+    &__cookies {
+        margin: 160px auto 0;
+        position: relative;
+        background-color: rgba(v.$color-white, 0.10);
+        padding: 0 5px;
+        max-width: 680px;
+        height: 70px;
+        border-radius: 20px;
+        @include m.d-flex(end, center, nowrap, row, 30px);
+
+        &-img {
+            width: 126px;
+            height: 198px;
+            @include m.position(absolute, 1, -1, top, left, -70px, -40px);
+        }
+
+        &-text {
+            @include m.font(14px, 400, v.$color-black, 14px);
+            @include m.d-flex(center, center);
+            width: 450px;
+            height: 100%;
+            border-right: 1px solid v.$color-white;
+            text-transform: uppercase;
+        }
+
+        &-button {
+            background-color: transparent;
+            border: none;
+            @include m.font(25px, 400, v.$color-black, 25px);
+            text-transform: uppercase;
+
+            @extend %hover-light;
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.d-flex(center, center, nowrap, column);
+            max-width: 450px;
+            height: fit-content;
+            margin: 120px auto 0;
+
+            &-text {
+                padding: 15px 10px 15px 80px;
+                border-right: none;
+                border-bottom: 1px solid v.$color-white;
+                @include m.font(12px, 400, v.$color-black, 12px);
+            }
+
+            &-button {
+                @include m.font(20px, 400, v.$color-black, 20px);
+                padding: 15px 0;
+            }
+        }
+
+        @media (max-width: v.$media_sm) {
+            width: fit-content;
+            margin: 80px auto 0;
+
+            &-img {
+                @include m.position(absolute, 1, -1, top, left, -60px, -20px);
+            }
+
+            &-text {
+                padding: 10px 5px 10px 110px;
+                @include m.font(11px, 400, v.$color-black, 11px);
+            }
+        }
+    }
+
+    &__scroll {
+        @include m.position(absolute, 1, -1, bottom, left, 230px, 15px);
+
+        &-content {
+            @include m.font(16px, 500, v.$color-white, 30px);
+            writing-mode: vertical-rl;
+            position: relative;
+
+            &::after {
+                @include m.position(absolute, 1, -1, bottom, left, -85px, 12px);
+                content: "";
+                display: block;
+                width: 1px;
+                height: 75px;
+                background-color: v.$color-white;
+            }
+        }
+
+        @media (max-width: v.$media_lg) {
+            @include m.position(absolute, 1, -1, bottom, left, 150px, 12px);
+        }
+
+        @media (max-width: v.$media_md) {
+            @include m.position(absolute, 1, -1, bottom, left, 250px, 12px);
+        }
+    }
+
+    @media (max-width: v.$media_lg) {
+        padding: 100px 0;
+        background: url(../assets/cloud_alpha.png) 0 20%/contain no-repeat;
+    }
+}
