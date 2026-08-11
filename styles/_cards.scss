@@ -1,0 +1,49 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.info-card {
+    width: 180px;
+    height: 195px;
+    padding: 30px 10px 0;
+    border-radius: 20px;
+    background-color: rgba(v.$color-white, $alpha: .1);
+    text-align: center;
+    @include m.d-flex(start, center, nowrap, column, 0, 10px);
+
+    &__icon {
+        color: v.$color-black;
+    }
+
+    &__title {
+        @include m.font(18px, 500, v.$color-black, 18px);
+    }
+
+    &__description {
+        @include m.font(16px, 300, v.$color-black, 18px);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(v.$color-white, $alpha: 0.3);
+
+        .info-card__icon,
+        .info-card__title,
+        .info-card__description {
+            color: v.$color-white;
+        }
+    }
+
+    @media(max-width: v.$media-md) {
+        width: 140px;
+        height: 150px;
+        padding: 20px 10px 0;
+
+        &__title {
+            @include m.font(14px, 500, v.$color-black, 14px);
+        }
+
+        &__description {
+            @include m.font(12px, 300, v.$color-black, 12px);
+        }
+    }
+}
