@@ -46,7 +46,7 @@
             height: 100%;
             padding: 0 0 0 min(100px, 5vw);
 
-            @media (max-width: v.$media_lg) {
+            @media (max-width: v.$media-lg) {
                 padding: 0;
             }
         }
@@ -64,7 +64,7 @@
         width: 90px;
     }
 
-    @media (max-width: v.$media_md) {
+    @media (max-width: v.$media-md) {
 
         &__links,
         .covid,
@@ -87,7 +87,7 @@
         }
     }
 
-    @media (max-width: v.$media_lg) {
+    @media (max-width: v.$media-lg) {
         @include m.d-flex(center, center, nowrap, row, min(90px, 5vw));
     }
 }

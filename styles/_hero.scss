@@ -16,16 +16,16 @@
         margin: 0 auto;
         padding: 0 15px;
 
-        @media (max-width: v.$media_lg) {
+        @media (max-width: v.$media-lg) {
             @include m.d-flex(start, center, nowrap, column, 0, 30px);
             max-width: 700px;
         }
 
-        @media (max-width: v.$media_md) {
+        @media (max-width: v.$media-md) {
             max-width: 500px;
         }
 
-        @media (max-width: v.$media_sm) {
+        @media (max-width: v.$media-sm) {
             max-width: 400px;
         }
     }
@@ -33,15 +33,15 @@
     &__title {
         @include m.font(120px, 700, v.$color-black, 120px);
 
-        @media (max-width: v.$media_lg) {
+        @media (max-width: v.$media-lg) {
             @include m.font(80px, 700, v.$color-black, 80px);
         }
 
-        @media (max-width: v.$media_md) {
+        @media (max-width: v.$media-md) {
             @include m.font(65px, 700, v.$color-black, 65px);
         }
 
-        @media (max-width: v.$media_sm) {
+        @media (max-width: v.$media-sm) {
             @include m.font(45px, 700, v.$color-black, 45px);
         }
     }
@@ -64,18 +64,18 @@
             outline: 2px solid v.$color-white;
         }
 
-        @media (max-width: v.$media_lg) {
+        @media (max-width: v.$media-lg) {
             @include m.font(20px, 700, v.$color-white);
             width: 300px;
             height: 60px;
             bottom: 10px;
         }
 
-        @media (max-width: v.$media_md) {
+        @media (max-width: v.$media-md) {
             position: static;
         }
 
-        @media (max-width: v.$media_sm) {
+        @media (max-width: v.$media-sm) {
             @include m.font(15px, 700, v.$color-white);
             width: 220px;
             height: 40px;
@@ -116,7 +116,7 @@
             @extend %hover-light;
         }
 
-        @media (max-width: v.$media_md) {
+        @media (max-width: v.$media-md) {
             @include m.d-flex(center, center, nowrap, column);
             max-width: 450px;
             height: fit-content;
@@ -135,7 +135,7 @@
             }
         }
 
-        @media (max-width: v.$media_sm) {
+        @media (max-width: v.$media-sm) {
             width: fit-content;
             margin: 80px auto 0;
 
@@ -168,16 +168,16 @@
             }
         }
 
-        @media (max-width: v.$media_lg) {
+        @media (max-width: v.$media-lg) {
             @include m.position(absolute, 1, -1, bottom, left, 150px, 12px);
         }
 
-        @media (max-width: v.$media_md) {
+        @media (max-width: v.$media-md) {
             @include m.position(absolute, 1, -1, bottom, left, 250px, 12px);
         }
     }
 
-    @media (max-width: v.$media_lg) {
+    @media (max-width: v.$media-lg) {
         padding: 100px 0;
         background: url(../assets/cloud_alpha.png) 0 20%/contain no-repeat;
     }
