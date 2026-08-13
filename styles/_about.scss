@@ -1,0 +1,187 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.about-section {
+    padding: 145px 15px 0;
+
+    @media (max-width: v.$media-md) {
+        padding: 80px 15px 0;
+    }
+}
+
+.about {
+    margin: 0 auto;
+    @include m.d-flex(start, center, nowrap, column, 0, 150px);
+    max-width: 1185px;
+
+    &__quality {
+        width: 100%;
+        height: 400px;
+        background: url(../assets/desktop_alpha.webp) 100% 150%/620px no-repeat;
+        text-align: left;
+
+
+        &-title {
+            @include m.font(45px, 400, v.$color-white)
+        }
+
+        &-description {
+            max-width: 590px;
+            margin: 30px 0 0;
+            @include m.font(20px, 300, v.$color-white, 30px)
+        }
+
+        @media (max-width: v.$media-xl) {
+            background: linear-gradient(180deg, v.$color-blue 0%, transparent 90%), url(../assets/desktop_alpha.webp) 100% 50%/500px no-repeat;
+        }
+
+        @media (max-width: v.$media-md) {
+            background: url(../assets/desktop_alpha.webp) 100% 100%/400px no-repeat;
+
+            &-title {
+                @include m.font(35px, 400, v.$color-white)
+            }
+
+            &-description {
+                max-width: 450px;
+                @include m.font(15px, 300, v.$color-white, 20px)
+            }
+        }
+
+        @media (max-width: v.$media-sm) {
+            background: url(../assets/desktop_alpha.webp) 100% 80%/300px no-repeat;
+
+            &-description {
+                max-width: 320px;
+            }
+        }
+    }
+
+    &__in-touch {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        text-align: right;
+        @include m.d-flex(end, end, nowrap, column);
+
+        &-title {
+            @include m.font(45px, 400, v.$color-white)
+        }
+
+        &-description {
+            margin: 30px 0 0;
+            @include m.font(20px, 300, v.$color-white, 30px)
+        }
+
+        &::before {
+            @include m.position(absolute, -1, -1, top, left, 130px, -220px);
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url(../assets/phone_alpha.webp) 0 0/855px no-repeat;
+            rotate: z 15deg;
+        }
+
+        @media (max-width: v.$media-xl) {
+            height: 450px;
+
+            &::before {
+                @include m.position(absolute, -1, -1, top, left, 20px, -280px);
+            }
+        }
+
+        @media (max-width: v.$media-lg) {
+            &::before {
+                background: url(../assets/phone_alpha.webp) 0 0/700px no-repeat;
+            }
+        }
+
+        @media (max-width: v.$media-md) {
+            height: 350px;
+
+            &-title {
+                @include m.font(35px, 400, v.$color-white)
+            }
+
+            &-description {
+                margin: 30px 0 0;
+                @include m.font(16px, 300, v.$color-white, 20px)
+            }
+
+            &::before {
+                @include m.position(absolute, -1, -1, top, left, -50px, -250px);
+                background: url(../assets/phone_alpha.webp) 0 0/500px no-repeat;
+                rotate: z 65deg;
+            }
+        }
+
+        @media (max-width: v.$media-sm) {
+            justify-content: start;
+
+            &::before {
+                background: url(../assets/phone_alpha.webp) 0 0/400px no-repeat;
+            }
+        }
+
+        @media (max-width: v.$media-min) {
+            &::before {
+                @include m.position(absolute, -1, -1, top, left, 50px, -200px);
+                background: url(../assets/phone_alpha.webp) 0 0/330px no-repeat;
+            }
+        }
+    }
+
+    &__approach {
+        height: 900px;
+        width: 100%;
+        background: url(../assets/cactus_alpha.webp) 100% 100%/570px no-repeat;
+        text-align: left;
+
+        &-title {
+            margin: 200px 0 0;
+            @include m.font(45px, 400, v.$color-white)
+        }
+
+        &-description {
+            max-width: 730px;
+            margin: 30px 0 0;
+            @include m.font(20px, 300, v.$color-white, 30px)
+        }
+
+        @media (max-width: v.$media-lg) {
+            background: url(../assets/cactus_alpha.webp) 100% 100%/500px no-repeat;
+
+            &-description {
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: v.$media-md) {
+            height: 700px;
+            background: url(../assets/cactus_alpha.webp) 100% 100%/350px no-repeat;
+
+            &-title {
+                margin: 50px 0 0;
+                @include m.font(35px, 400, v.$color-white)
+            }
+
+            &-description {
+                margin: 30px 0 0;
+                @include m.font(16px, 300, v.$color-white, 20px)
+            }
+        }
+
+        @media (max-width: v.$media-sm) {
+            height: 500px;
+            background: url(../assets/cactus_alpha.webp) 100% 100%/250px no-repeat;
+
+            &-title {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media (max-width: v.$media-xl) {
+        row-gap: 80px;
+    }
+}

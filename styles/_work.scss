@@ -1,7 +1,17 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.work-section {}
+.work-section {
+    padding: 0 0 185px;
+
+    @media(max-width: v.$media-md) {
+        padding: 0 0 120px;
+    }
+
+    @media(max-width: v.$media-min) {
+        padding: 0 0 80px;
+    }
+}
 
 .work {
     max-width: 930px;
