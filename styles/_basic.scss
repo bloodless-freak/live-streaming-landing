@@ -27,7 +27,6 @@ html {
     color: v.$color-white;
 }
 
-
 h1,
 h2,
 h3,
@@ -36,7 +35,8 @@ h5,
 h6,
 p,
 ul,
-figure {
+figure,
+blockquote {
     margin: 0;
     padding: 0;
 }

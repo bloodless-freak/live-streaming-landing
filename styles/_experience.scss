@@ -2,10 +2,10 @@
 @use "mixins" as m;
 
 .experience-section {
-    padding: 200px 15px;
+    padding: 200px 15px 0;
 
     @media (max-width: v.$media-md) {
-        padding: 100px 15px;
+        padding: 100px 15px 0;
     }
 }
 
