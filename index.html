@@ -48,6 +48,50 @@
         </div>
     </header>
 
+    <div class="mobile-menu">
+        <label for="checkboxID" class="mobile-menu__burger">
+            <svg class="mobile-menu__burger-icon" aria-hidden="true">
+                <use href="assets/sprites.svg#burger-icon"></use>
+            </svg>
+        </label>
+
+        <input id="checkboxID" type="checkbox" class="mobile-menu__toggler" aria-label="toggle mobile menu">
+
+        <nav class="mobile-menu__nav mobile-nav">
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__list-item">
+                    <a href="#work" class="mobile-nav__list-item-link">How we work</a>
+                </li>
+
+                <li class="mobile-nav__list-item">
+                    <a href="#about" class="mobile-nav__list-item-link">About us</a>
+                </li>
+
+                <li class="mobile-nav__list-item">
+                    <a href="#experience" class="mobile-nav__list-item-link">Our experience</a>
+                </li>
+
+                <li class="mobile-nav__list-item">
+                    <a href="#testimonials" class="mobile-nav__list-item-link">Testimonials</a>
+                </li>
+
+                <li class="mobile-nav__list-item">
+                    <a href="#form" class="mobile-nav__list-item-link">Form</a>
+                </li>
+
+                <li class="mobile-nav__list-item">
+                    <a href="#contacts" class="mobile-nav__list-item-link">Contacts</a>
+                </li>
+            </ul>
+
+            <label for="checkboxID" class="mobile-nav__close">
+                <svg class="mobile-nav__close-icon" aria-hidden="true">
+                    <use href="assets/sprites.svg#cross-icon"></use>
+                </svg>
+            </label>
+        </nav>
+    </div>
+
     <main>
         <section class="hero-section">
             <div class="container">
@@ -72,7 +116,7 @@
             </div>
         </section>
 
-        <section class="work-section">
+        <section class="work-section" id="work">
             <div class="container">
                 <div class="work">
                     <h2 class="work__title">How we work</h2>
@@ -138,7 +182,7 @@
 
         <hr class="divider">
 
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="container">
                 <div class="about">
                     <div class="about__quality">
@@ -167,7 +211,7 @@
 
         <hr class="divider">
 
-        <section class="experience-section">
+        <section class="experience-section" id="experience">
             <div class="container">
                 <div class="experience">
                     <h2 class="experience__title">Our experience</h2>
@@ -209,7 +253,7 @@
             </div>
         </section>
 
-        <section class="testimonials-section">
+        <section class="testimonials-section" id="testimonials">
             <div class="container">
                 <div class="testimonials">
                     <h2 class="testimonials__title">Testimonials</h2>
@@ -251,7 +295,7 @@
             </div>
         </section>
 
-        <section class="form-section">
+        <section class="form-section" id="form">
             <div class="container">
                 <div class="form-wrapper">
                     <form action="mailto:madeup@gmail.com" class="form">
@@ -274,7 +318,7 @@
     </main>
 
     <footer>
-        <section class="contacts-section">
+        <section class="contacts-section" id="contacts">
             <div class="container">
                 <div class="contacts">
                     <div class="contacts__terms">
@@ -299,7 +343,8 @@
                             </svg>
                         </a>
 
-                        <a href="https://instagram.com" target="_blank" aria-label="instagram" rel="noopener noreferrer">
+                        <a href="https://instagram.com" target="_blank" aria-label="instagram"
+                            rel="noopener noreferrer">
                             <svg class="contacts__social-media-icon" aria-hidden="true">
                                 <use href="assets/sprites.svg#instagram-icon"></use>
                             </svg>
