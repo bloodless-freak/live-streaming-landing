@@ -1,6 +1,7 @@
 @use "variables" as v;
 
 %hover-black {
+    transition: color .2s;
     &:hover {
         cursor: pointer;
         color: v.$color-black;
@@ -8,6 +9,7 @@
 }
 
 %hover-light {
+    transition: color .2s;
     &:hover {
         cursor: pointer;
         color: v.$color-white;
