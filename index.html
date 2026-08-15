@@ -34,12 +34,12 @@
                 </div>
 
                 <div class="nav__covid-wrapper covid">
-                    <a href="#" class="covid__link">COVID-19 UPDATE</a>
+                    <a href="#" class="covid__link" aria-label="covid link">COVID-19 UPDATE</a>
                 </div>
 
                 <div class="nav__globe-wrapper globe">
-                    <a href="#" class="globe__link">
-                        <svg class="globe__link-icon">
+                    <a href="#" class="globe__link" aria-label="global web link">
+                        <svg class="globe__link-icon" aria-hidden="true">
                             <use href="assets/sprites.svg#globe-icon"></use>
                         </svg>
                     </a>
@@ -149,14 +149,14 @@
                     </div>
 
                     <div class="about__in-touch">
-                        <h3 class="about__in-touch-title">Always in touch</h3>
+                        <h2 class="about__in-touch-title">Always in touch</h2>
                         <p class="about__in-touch-description">We are always ready to answer your questions.<br>You can
                             call us at the weekends and at night.<br>Also you can have a meeting for personal
                             consultation.</p>
                     </div>
 
                     <div class="about__approach">
-                        <h3 class="about__approach-title">Individual Approach</h3>
+                        <h2 class="about__approach-title">Individual Approach</h2>
                         <p class="about__approach-description">Our company works according to the principle of
                             individual approach to every client.This method lets us to get success in problems of all
                             levels.</p>
@@ -173,33 +173,33 @@
                     <h2 class="experience__title">Our experience</h2>
                     <div class="experience__cards-wrapper">
                         <figure class="img-card">
-                            <h4 class="img-card__title">Serverless Live Streaming</h4>
+                            <h3 class="img-card__title">Serverless Live Streaming</h3>
                             <img src="assets/card_shooting.webp" alt="shooting image" class="img-card__preview">
-                            <button class="img-card__button">
-                                <svg class="img-card__button-icon">
+                            <button class="img-card__button" aria-label="Learn more">
+                                <svg class="img-card__button-icon" aria-hidden="true">
                                     <use href="assets/sprites.svg#arrow-icon"></use>
                                 </svg>
                             </button>
                         </figure>
 
                         <figure class="img-card">
-                            <h4 class="img-card__title">
+                            <h3 class="img-card__title">
                                 <span>Learn about CloudFlex</span>
                                 <span>team cases</span>
-                            </h4>
+                            </h3>
                             <img src="assets/card_working.webp" alt="working image" class="img-card__preview">
-                            <button class="img-card__button">
-                                <svg class="img-card__button-icon">
+                            <button class="img-card__button" aria-label="Learn more">
+                                <svg class="img-card__button-icon" aria-hidden="true">
                                     <use href="assets/sprites.svg#arrow-icon"></use>
                                 </svg>
                             </button>
                         </figure>
 
                         <figure class="img-card">
-                            <h4 class="img-card__title">Live streaming from mobile</h4>
+                            <h3 class="img-card__title">Live streaming from mobile</h3>
                             <img src="assets/card_streaming.webp" alt="streaming image" class="img-card__preview">
-                            <button class="img-card__button">
-                                <svg class="img-card__button-icon">
+                            <button class="img-card__button" aria-label="learn more">
+                                <svg class="img-card__button-icon" aria-hidden="true">
                                     <use href="assets/sprites.svg#arrow-icon"></use>
                                 </svg>
                             </button>
@@ -226,14 +226,14 @@
                             </blockquote>
                         </figure>
 
-                        <button class="slider__left-button">
-                            <svg class="slider__left-button-icon">
+                        <button class="slider__left-button" aria-label="previous testimonial">
+                            <svg class="slider__left-button-icon" aria-hidden="true">
                                 <use href="assets/sprites.svg#arrow-icon"></use>
                             </svg>
                         </button>
 
-                        <button class="slider__right-button">
-                            <svg class="slider__right-button-icon">
+                        <button class="slider__right-button" aria-label="next testimonial">
+                            <svg class="slider__right-button-icon" aria-hidden="true">
                                 <use href="assets/sprites.svg#arrow-icon"></use>
                             </svg>
                         </button>
@@ -249,6 +249,27 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="form-wrapper">
+                    <form action="mailto:madeup@gmail.com" class="form">
+                        <label for="name-input" class="form__title">Ready to get started? Drop us a line!</label>
+                        <input id="name-input" type="text" placeholder="Name" class="form__name-input" name="name"
+                            aria-label="name" required>
+                        <input id="email-input" type="email" placeholder="Email" class="form__email-input" name="email"
+                            aria-label="email" required>
+                        <input id="question-input" type="text" placeholder="What can we do for you?"
+                            class="form__question-input" name="question" aria-label="question to ask" required>
+
+                        <button type="submit" class="form__submit-button">Send</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-section__background-cloud background-cloud-left"></div>
+            <div class="form-section__background-cloud background-cloud-right"></div>
         </section>
     </main>
 
