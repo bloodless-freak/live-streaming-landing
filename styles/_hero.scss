@@ -6,7 +6,7 @@
     max-width: 1260px;
     margin: 0 auto;
     position: relative;
-    padding: 150px 0;
+    padding: 150px 15px;
     background: url("../assets/cloud_alpha.png") center/contain no-repeat;
 
     &__content {
@@ -43,6 +43,10 @@
 
         @media (max-width: v.$media-sm) {
             @include m.font(45px, 700, v.$color-black, 45px);
+        }
+
+        @media (max-width: v.$media-min) {
+            @include m.font(40px, 700, v.$color-black, 40px);
         }
     }
 
@@ -86,7 +90,6 @@
         margin: 160px auto 0;
         position: relative;
         background-color: rgba(v.$color-white, 0.10);
-        padding: 0 5px;
         max-width: 680px;
         height: 70px;
         border-radius: 20px;
@@ -141,7 +144,9 @@
             margin: 80px auto 0;
 
             &-img {
-                @include m.position(absolute, 1, -1, top, left, -60px, -20px);
+                width: 100px;
+                height: 170px;
+                @include m.position(absolute, 1, -1, top, left, -60px, 5px);
             }
 
             &-text {
@@ -179,7 +184,7 @@
     }
 
     @media (max-width: v.$media-lg) {
-        padding: 100px 0;
+        padding: 100px 15px;
         background: url(../assets/cloud_alpha.png) 0 20%/contain no-repeat;
     }
 }

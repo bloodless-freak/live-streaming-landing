@@ -126,7 +126,7 @@
         @media (max-width: v.$media-min) {
             &::before {
                 @include m.position(absolute, -1, -1, top, left, 50px, -200px);
-                background: url(../assets/phone_alpha.webp) 0 0/330px no-repeat;
+                background: url(../assets/phone_alpha.webp) 0 0/290px no-repeat;
             }
         }
     }

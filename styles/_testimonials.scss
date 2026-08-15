@@ -54,6 +54,7 @@
 
 .slider {
     position: relative;
+    width: min(500px, 100%);
 
     &__left-button {
         @extend %slider-button;
@@ -117,6 +118,8 @@
     }
 
     @media (max-width: v.$media-md) {
+        width: min(320px, 100%);
+        
         &__left-button {
             height: 53px;
             width: 53px;
